@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+  --cyan: hsl(172, 67%, 45%);
+  --darkGrayishCyan: hsl(183, 100%, 15%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(180, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --strongCyan: hsl(172, 67%, 45%);
+  --font: 24px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--lightGrayishCyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Space Mono', sans-serif;
+  height: 100vh;
+  font-size: 16px;
+
+}
+
+label {
+  color: gray;
+/* card */
+}
+.card {
+  width: 1000px;
+  padding: 80px;
+  background-color: var(--White);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  border-radius: 20px;
+  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.card .input {
+  width: 100%;
+  padding: 10px;
+  text-align: end;
+  margin-top: 10px;
+  font-size: 24px;
+  color: var(--darkGrayishCyan);
+  border: transparent;
+  font-weight: 700;
+  outline: none;
+}
+
+.card .input:focus {
+  border: 1px solid var(--strongCyan);
+}
+
+.card .input-icn {
+  position: absolute; 
+  top: 30px;
+  left: 1rem;
+  width: 15px;
+  aspect-ratio: 1/1;
+
+}
+
+.card input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.card .card-left {
+  display: flex;
+  flex-direction: column;
+}
+
+#bill,
+#people-box {
+  position: relative;
+  display: flex;
+}
+
+#bill .input,
+#num-people .input {
+  flex: 1;
+}
+
+/* Left Top */
+
+#left-top {
+  height: 25%;
+  margin-bottom: 1.5rem;
+}
+
+/* Left Middle */
+
+#left-middle {
+  height: 50%;
+  margin-bottom: 3rem;
+}
+#tip-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.tip-button {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--darkGrayishCyan);
+  color: white;
+  width: 100%;
+
+}
+
+.tip-button:hover {
+  background-color: var(--strongCyan);
+  color: var(--darkGrayishCyan);
+  
+}
+
+.tip-button-custom {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: var(--darkGrayishCyan);
+}
+
+.tip-button-custom::placeholder {
+  text-align: center;
+}
+
+.tip-button-custom:focus {
+  border: 1px solid var(--strongCyan);
+}
+
+/* Left Bottom */
+#left-bottom {
+  height: 25%;
+}
+
+#left-bottom #people-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Card Right */
+
+.card-right {
+  background-color: var(--darkGrayishCyan);
+  border-radius: .8rem;
+}
+
+.card-right-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.card-right .calculation-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.card-right .right-text h2 {
+  font-size: 1rem;
+  color:  var(--lightGrayishCyan);
+}
+
+
+.card-right .right-text p {
+  font-size: .8rem;
+  color: var(--grayishCyan);
+}
+
+.card-right .tip-num,
+.card-right .total-num,
+.card-right .dollarSign {
+  font-size: 30px;
+  color: var(--strongCyan);
+}
+
+.card-right .pos-absolute {
+  position: relative;
+  
+}
+
+.card-right-button {
+  margin-top: 80px;
+  background-color: var(--grayishCyan);
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  text-transform: uppercase;
+  color: var(--darkGrayishCyan);
+  font-weight: 700;
+  border-radius: .5rem;
+  outline: none;
+}
+
+.dollarSign {
+  position: absolute;
+  left: -20px;
+}
+
+@media all and (max-width:800px)
+{
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+}

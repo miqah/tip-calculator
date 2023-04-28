@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="">
+  
+  <title>Tip calculator app</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="card">
+    <div class="card-left">
+      <div id="left-top">
+        <label for="bill">Bill</label>
+        <div id="bill">
+          <img src="images/icon-dollar.svg" alt="dollar" class="input-icn">
+          <input type="number" class="input" name="bill" placeholder="0" value="">
+        </div>
+      </div>
+      <div id="left-middle">
+        <label for="tip">Select Tip %</label>
+        <div id="tip-list">
+          <button class="tip-button" value="5">5%</button>
+          <button class="tip-button" value="10">10%</button>
+          <button class="tip-button" value="15">15%</button>
+          <button class="tip-button" value="25">25%</button>
+          <button class="tip-button" value="50">50%</button>
+          <input type="number" placeholder="Custom" value="" class="tip-button-custom">
+        </div>
+      </div>
+      <div id="left-bottom">
+        <div id="people-info">
+          <label for="num-people">Number of People</label>
+          <p class="if-zero-number"></p>
+        </div>
+        <div id="people-box">
+          <img src="images/icon-person.svg" alt="person icon" class="input-icn">
+          <input type="text" placeholder="0" class="input" value="">
+        </div>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-right-flex">
+        <div class="calculation-box">
+          <div class="right-text">
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <div class="pos-absolute">
+            <span class="dollarSign">$</span>
+            <h1 class="tip-num">0.00</h1>
+          </div>
+        </div>
+        <div class="calculation-box">
+          <div class="right-text">
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <div class="pos-absolute">
+            <span class="dollarSign">$</span>
+            <h1 class="total-num">0.00</h1>
+          </div>
+        </div> 
+        <button class="card-right-button" disabled>Reset</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
